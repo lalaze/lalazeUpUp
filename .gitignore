@@ -1,0 +1,8 @@
+build/
+node_modules/
+.vscode/
+radarlabs-s2-0.0.1.tgz
+*.log
+*.txt
+lib
+*.swp

@@ -1,0 +1,28 @@
+{
+  "name": "lalazeupup",
+  "version": "1.0.0",
+  "description": "练习帮助构建工具建的库，以后有用也可以直接上",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lalaze/lalazeUpUp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lalaze/lalazeUpUp/issues"
+  },
+  "homepage": "https://github.com/lalaze/lalazeUpUp#readme",
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.2.0",
+    "cz-customizable": "^6.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  }
+}
