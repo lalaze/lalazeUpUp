@@ -18,7 +18,7 @@
   "homepage": "https://github.com/lalaze/lalazeUpUp#readme",
   "devDependencies": {
     "@commitlint/cli": "^9.1.1",
-    "@commitlint/config-conventional": "^9.1.1",
+    "commitlint-config-cz": "^0.13.1",
     "cz-customizable": "^6.3.0",
     "husky": "^4.2.5",
     "install": "^0.13.0"
@@ -31,6 +31,6 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }  
+    }
   }
 }
