@@ -4,7 +4,8 @@
   "description": "练习帮助构建工具建的库，以后有用也可以直接上",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@commitlint/cli": "^9.1.1",
     "commitlint-config-cz": "^0.13.1",
+    "conventional-changelog": "^3.1.21",
     "cz-customizable": "^6.3.0",
     "husky": "^4.2.5",
     "install": "^0.13.0"
