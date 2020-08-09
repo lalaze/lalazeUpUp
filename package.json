@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --bail --coverage",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
-    "lint": "eslint src --max-warnings 0",
+    "lint": "eslint src test --max-warnings 0",
     "build": "npm run lint && npm run jest && rimraf dist types && gulp"
   },
   "repository": {
