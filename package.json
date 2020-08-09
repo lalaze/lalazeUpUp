@@ -4,10 +4,10 @@
   "description": "练习帮助构建工具建的库，以后有用也可以直接上",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --bail --coverage",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "lint": "eslint src --max-warnings 0",
-    "build": "npm run lint && rimraf dist types && gulp"
+    "build": "npm run lint && npm run jest && rimraf dist types && gulp"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   "devDependencies": {
     "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^9.1.1",
+    "@types/jest": "^26.0.9",
     "@typescript-eslint/eslint-plugin": "^3.8.0",
     "@typescript-eslint/parser": "^3.8.0",
     "conventional-changelog": "^3.1.21",
@@ -31,8 +32,10 @@
     "gulp-typescript": "^6.0.0-alpha.1",
     "husky": "^4.2.5",
     "install": "^0.13.0",
+    "jest": "^26.2.2",
     "lint-staged": "^10.2.11",
     "merge2": "^1.4.1",
+    "ts-jest": "^26.1.4",
     "typescript": "^3.9.7"
   },
   "config": {
@@ -51,7 +54,8 @@
   ],
   "lint-staged": {
     "*.ts": [
-      "npm run lint"
+      "npm run lint",
+      "npm run test"
     ],
     "*.js": "eslint --cache --fix"
   }
